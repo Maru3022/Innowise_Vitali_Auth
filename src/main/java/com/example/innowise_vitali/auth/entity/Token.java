@@ -1,6 +1,5 @@
 package com.example.innowise_vitali.auth.entity;
 
-import com.example.innowise_vitali.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,7 +24,7 @@ public class Token {
     @Enumerated(EnumType.STRING)
     @Column(name = "token_type", nullable = false, length = 20)
     @Builder.Default
-    private TokenType tokenType = TokenType.BEARER;
+    private TokenType tokenType = TokenType.ACCESS;
 
     @Column(nullable = false)
     @Builder.Default
