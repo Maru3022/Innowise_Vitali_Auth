@@ -24,6 +24,11 @@
     </properties>
 
     <dependencies>
+        <!-- Spring Boot Actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -166,7 +171,7 @@
                         io.grpc:protoc-gen-grpc-java:1.59.0:exe:${os.detected.classifier}
                     </pluginArtifact>
 
-                    <!-- ВАЖНО: явные пути -->
+                    <!-- Р’РђР–РќРћ: СЏРІРЅС‹Рµ РїСѓС‚Рё -->
                     <protoSourceRoot>${project.basedir}/src/main/proto</protoSourceRoot>
                     <outputDirectory>
                         ${project.build.directory}/generated-sources/protobuf/java
@@ -183,7 +188,7 @@
                 </executions>
             </plugin>
 
-            <!-- Добавляем сгенерированные источники в проект -->
+            <!-- Р”РѕР±Р°РІР»СЏРµРј СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Рµ РёСЃС‚РѕС‡РЅРёРєРё РІ РїСЂРѕРµРєС‚ -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
