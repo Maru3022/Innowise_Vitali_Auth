@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/online_store_auth
+    username: postgres
+    password: postgres
+
+  flyway:
+    enabled: true
+
+grpc:
+  server:
+    port: 9090
+
+logging:
+  level:
+    com.example.innowise_vitali: DEBUG
+    org.springframework.security: DEBUG
